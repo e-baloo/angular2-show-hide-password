@@ -1,4 +1,4 @@
-import {Component, ContentChild  } from 'angular2/core'
+import {Component, ContentChild  } from '@angular/core'
 import {ShowHideInput} from './show-hide-input'
 
 @Component({ selector: 'show-hide-container',
