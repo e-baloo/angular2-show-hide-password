@@ -1,4 +1,4 @@
-import {Component} from 'angular2/core';
+import {Component} from '@angular/core';
 import {ShowHideContainer} from './show-hide-container'
 import {ShowHideInput} from './show-hide-input'
 
