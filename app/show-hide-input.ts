@@ -4,13 +4,14 @@ import {Directive, HostBinding} from '@angular/core';
 })
 export class ShowHideInput
 {
-    @HostBinding() type: string;
-     
+    
+    @HostBinding('type') inputType;
+   
     constructor(){
-        this.type='password';
+        this.inputType='password';
     }
     
     changeType(type:string): void {
-        this.type = type;
+        this.inputType = type;
     }
 }

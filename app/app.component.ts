@@ -1,4 +1,4 @@
-import {Component, NgModule} from '@angular/core';
+import {Component} from '@angular/core';
 import {ShowHideContainer} from './show-hide-container'
 import {ShowHideInput} from './show-hide-input'
 
@@ -10,9 +10,7 @@ import {ShowHideInput} from './show-hide-input'
     <show-hide-container>
        <input type="password" show-hide-input [ngModel]="password" />
     </show-hide-container>
-  `,
-  viewProviders: [ShowHideContainer, ShowHideInput]
-})
+  `})
 export class AppComponent {
     password = "secret";
 }

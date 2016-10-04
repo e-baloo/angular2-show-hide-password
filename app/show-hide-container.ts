@@ -18,6 +18,7 @@ export class ShowHideContainer
     toggleShow()
     {
         this.show = !this.show;
+        console.log(this.input);
         if (this.show){
             this.input.changeType("text");
         }
