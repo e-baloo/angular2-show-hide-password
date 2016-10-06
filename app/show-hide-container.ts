@@ -1,26 +1,26 @@
-import {Component, Output, EventEmitter} from '@angular/core';
+import {Component, ContentChild} from '@angular/core';
 
 @Component({ selector: 'show-hide-container',
             template: `<ng-content></ng-content>
-                       <a (click)="toggleInput()">show/hide</a>`
+                       <a (click)="toggleShow($event)">show/hide</a>`
 })
 export class ShowHideContainer 
 {
-    @Output() changeInputType: EventEmitter<string> = new EventEmitter();
-    type: string = "password";
+    show = false;
+    
+    @ContentChild('showhideinput') input;
     
     constructor(){}
    
-    toggleInput():void
+    toggleShow()
     {
-        if (this.type==="password")
-        {
-            this.type = "text";
+        this.show = !this.show;
+        console.log(this.input);
+        if (this.show){
+            this.input.nativeElement.type='text';
         }
-        else
-        {
-            this.type = "password";
+        else {
+            this.input.nativeElement.type='password';
         }
-        this.changeInputType.emit(this.type);
     }
 }
